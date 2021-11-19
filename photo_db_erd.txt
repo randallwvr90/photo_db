@@ -1,0 +1,29 @@
+images
+-
+image_id int PK
+title varchar
+date date
+film_id int FK >- films.film_id
+type_id int FK >-< image_types.type_id
+camera_id int FK >- cameras.camera_id
+
+films
+-
+film_id int PK
+film_name varchar
+format varchar
+color varchar
+ISO int
+
+image_types
+-
+type_id int PK
+type_name varchar
+
+cameras
+-
+camera_id int PK
+camera_name varchar
+camera_mfg_date date
+camera_type varchar
+format varchar FK >- films.format
